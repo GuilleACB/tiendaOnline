@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tiendaOnline"
+    }
+  },
+  "defaultProject": "tiendaOnline",
+  "cli": {
+    "analytics": false
+  }
 }
