@@ -10,6 +10,7 @@ export class PoliticaDeCookiesComponent implements OnInit {
 
   nombreDeEmpresa: string = 'mi empresa';
   correoDeEmpresa: string = 'mi correo de empresa';
+  
 
   constructor() { }
 
