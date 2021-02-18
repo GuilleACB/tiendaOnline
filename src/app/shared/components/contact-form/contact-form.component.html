@@ -64,7 +64,7 @@
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" formControlName="politicalPrivacy"
                     (change)="eventCheck($event)">
-                <label class="form-check-label" for="exampleCheck1">He leído y acepto la <a href="#">política de
+                <label class="form-check-label" for="exampleCheck1">He leído y acepto la <a routerLink="/web/politica-de-privacidad">política de
                         privacidad</a></label>
             </div>
             <button type="submit" [disabled]="activeSendButton"

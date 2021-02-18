@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
 
   title: string = 'Especialistas en cristal y carpintería metálica';
 
@@ -19,7 +16,10 @@ export class HomeComponent implements OnInit {
                          cristal y paneles de cristal a medida. También somos fabricantes e instaladores
                          de puertas y ventanas de cristal, mamparas de ducha y espejos para 
                          viviendas particulares.`;
-  ngOnInit(): void {}
-  
+                         
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }
