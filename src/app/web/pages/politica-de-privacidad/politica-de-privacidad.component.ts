@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PoliticaDePrivacidadComponent implements OnInit {
 
+  nombreEmpresa: string = '/nombreEmpresa/';
+  sitioWeb: string = '/urlWeb/';
+  correoEmpresa: string = '/correoEmpresa/';
+  facebook: string = '/facebookUrl/';
+
   constructor() { }
 
   ngOnInit(): void {
