@@ -1,0 +1,74 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-center text-warning">¿Pídenos presupuesto?</h5>
+        <form [formGroup]="contactForm" (ngSubmit)="onSaveForm()">
+            <div class="form-group mt-1">
+                <input type="text" class="form-control" formControlName="name" placeholder="Nombre">
+
+                <div class="alert-danger" *ngIf="name.invalid && name.touched">
+                    <div class="container-error-message" *ngIf="name.errors.required">
+                        Nombre requerido
+                    </div>
+                    <div class="container-error-message" *ngIf="name.errors.minlength">
+                        El nombre tiene que tener mínimo 3 caracteres
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group mt-1">
+                <input type="text" class="form-control" formControlName="phone" placeholder="Telefono">
+
+                <div class="alert-danger" *ngIf="phone.invalid && phone.touched">
+                    <div class="container-error-message" *ngIf="phone.errors.required">
+                        Teléfono requerido
+                    </div>
+                    <div class="container-error-message" *ngIf="phone.errors.minlength">
+                        El número de Teléfono tiene que tener mínimo 9 caracteres
+                    </div>
+                    <div class="container-error-message" *ngIf="phone.errors.pattern">
+                        Formato incorrecto
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group mt-1">
+                <input type="text" class="form-control" formControlName="email" placeholder="Correo">
+
+                <div class="alert-danger" *ngIf="email.invalid && email.touched">
+                    <div class="container-error-message" *ngIf="email.errors.required">
+                        Correo electrónico requerido
+                    </div>
+                    <div class="container-error-message"
+                        *ngIf="email.errors.pattern">
+                        Formato incorrecto
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group mt-1">
+                <textarea name="textarea" class="form-control" formControlName="message"
+                    placeholder="Mensaje"></textarea>
+
+                <div class="alert-danger" *ngIf="message.invalid && message.touched">
+                    <div class="container-error-message" *ngIf="message.errors.required">
+                        Mensaje requerido
+                    </div>
+                    <div class="container-error-message" *ngIf="message.errors.minlength">
+                        Mínimo 10 caracteres
+                    </div>
+                    <div class="container-error-message" *ngIf="message.errors.maxlength">
+                        Máximo 100 caracteres
+                    </div>
+                </div>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" formControlName="politicalPrivacy"
+                    (change)="eventCheck($event)">
+                <label class="form-check-label" for="exampleCheck1">He leído y acepto la <a href="#">política de
+                        privacidad</a></label>
+            </div>
+            <button type="submit" [disabled]="activeSendButton"
+                class="mt-1 btn btn-dark text-warning btn-block">Enviar</button>
+        </form>
+    </div>
+</div>
