@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { throwError } from 'rxjs';
-import { PoliticaDePrivacidad } from '../../../model/PoliticaDePrivacidad';
+import { PoliticaDePrivacidad } from '../../../model/IPoliticaDePrivacidad';
 
 @Component({
   selector: 'app-politica-de-privacidad',

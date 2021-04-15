@@ -8,7 +8,7 @@
                 <div class="text-center p-3">
                     <img src="https://handmadebase.com/wp-content/uploads/data/10-24.jpg" alt="profile picture"
                         class="img-fluid rounded-cicle my-4 p1 d-none d-md-block shadow">
-                    <a href="#" class="navbar-brand mx-0 font-weight-bold text-nowrap">Panel de Control</a>
+                        <a routerLink="/dashboard" class="navbar-brand mx-0 font-weight-bold text-nowrap">Panel de Control</a>
                 </div>
 
                 <div class="p-3">
@@ -21,13 +21,13 @@
                 <div class=" collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav flex-column w-100 justify-content-center">
                         <li class="nav-item">
-                            <a href="#" class="nav-link avtive">Editar datos Empresa</a>
+                            <a routerLink="/dashboard/datos-empresa" class="nav-link avtive">Editar datos Empresa</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link avtive">Leer Mensajes</a>
+                            <a routerLink="/dashboard/mensajes-contacto" class="nav-link avtive">Leer Mensajes</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link avtive" (click)="onLogout()">Salir: {{currentUser}}</a>
+                            <p class="nav-link avtive" (click)="onLogout()">Salir {{currentUser}}</p>
                         </li>
                     </ul>
                 </div>

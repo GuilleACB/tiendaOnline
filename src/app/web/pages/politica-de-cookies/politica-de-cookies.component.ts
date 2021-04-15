@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PoliticaDeCookies } from '../../../model/PoliticaDeCookies';
+import { PoliticaDeCookies } from '../../../model/IPoliticaDeCookies';
 
 @Component({
   selector: 'app-politica-de-cookies',

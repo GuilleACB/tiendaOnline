@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AvisoLegal } from '../../../model/AvisoLegal';
+import { AvisoLegal } from '../../../model/IAvisoLegal';
 
 @Component({
   selector: 'app-aviso-legal',

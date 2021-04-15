@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactMessageService } from '../../../service/contact-message.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { InfMsg } from '../../../model/InfMsg';
 
 
 @Component({
@@ -15,13 +16,16 @@ export class ContactFormComponent implements OnInit {
   activeSendButton: boolean = true;
 
   emailPattern: any = '^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$';
-  phonePattern: any = '[0-9]{10}';
+  phonePattern: any = '[0-9]{9}';
 
-  constructor(private dbData: ContactMessageService) {
+
+  infMsg: InfMsg;
+
+  constructor(private contactMessageServer: ContactMessageService) {
 
     this.contactForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      phone: new FormControl('', [Validators.required, Validators.minLength(9),Validators.pattern(this.phonePattern)]),
+      phone: new FormControl('', [Validators.required, Validators.minLength(9), Validators.pattern(this.phonePattern)]),
       email: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
       message: new FormControl('', [Validators.required, Validators.minLength(10), , Validators.maxLength(100)]),
       politicalPrivacy: new FormControl('', [Validators.required]),
@@ -36,10 +40,18 @@ export class ContactFormComponent implements OnInit {
     this.contactForm.reset();
   }
 
-  onSaveForm() {
+  async onSaveForm() {
     if (this.contactForm.valid) {
-      this.dbData.addMessaje(this.contactForm.value);
+
+      this.infMsg = await this.contactMessageServer.addMessaje(this.contactForm.value);
+
+      if (this.infMsg.status == 'ERROR') {
+        console.log('onSaveForm-> ', this.infMsg)
+      }
+
       this.onResetForm();
+      this.activeSendButton = true;
+
     } else {
       console.log('no valido');
     }

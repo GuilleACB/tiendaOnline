@@ -6,11 +6,13 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { GlobalComponent } from './pages/global/global.component';
+import { DatosEmpresaComponent } from './pages/datos-empresa/datos-empresa.component';
+import { MensajesContactoComponent } from './pages/mensajes-contacto/mensajes-contacto.component';
 
 
 
 @NgModule({
-  declarations: [GlobalComponent],
+  declarations: [GlobalComponent, DatosEmpresaComponent, MensajesContactoComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
