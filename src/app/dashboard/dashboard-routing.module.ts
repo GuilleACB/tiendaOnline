@@ -1,16 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GlobalComponent } from './pages/global/global.component';
 
-import {ContactBoardComponent} from './pages/contact-board/contact-board.component';
 
-const routes: Routes = [{
-  path: '',
-  children: [
-    { path: 'contactBoard', component: ContactBoardComponent },
-    { path: '**', redirectTo:'contactBoard'}
-  ]
-}
-];
+
+const routes: Routes = [ { path: '', component: GlobalComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

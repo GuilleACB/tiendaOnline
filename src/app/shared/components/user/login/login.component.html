@@ -1,0 +1,26 @@
+<section id="login" class="mb-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+        <div class="card_login">
+          <div class="card">
+            <div class="card-body text-center">
+              <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <div class="form-group">
+                  <input formControlName="email" type="email" id="email" name="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group mt-1">
+                  <input formControlName="password" type="password" id="password" name="password" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Login</button>
+              </form>
+              <div class="btn-back">
+                <a routerLink="/web">Salir</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

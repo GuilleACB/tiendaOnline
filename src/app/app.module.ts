@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
 
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import {ContactMessageService} from './service/contact-message.service';
+import { WebLayoutComponent } from './layout/web-layout/web-layout.component';
+import { DashboardLayoutComponent } from './layout/dashboard-layout/dashboard-layout.component';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WebLayoutComponent,
+    DashboardLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,10 @@ import {ContactMessageService} from './service/contact-message.service';
     SharedModule,
     PrimeNgModule
   ],
-  providers: [ContactMessageService],
+  providers: [
+     AngularFireAuth,
+     ContactMessageService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

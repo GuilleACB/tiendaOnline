@@ -27,7 +27,7 @@
                             <a href="#" class="nav-link avtive">Leer Mensajes</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link avtive">otro menú</a>
+                            <a href="#" class="nav-link avtive" (click)="onLogout()">Salir: {{currentUser}}</a>
                         </li>
                     </ul>
                 </div>
@@ -35,12 +35,9 @@
         </aside>
         <div class="col px-0 flex-grow-1">
             <div class="container py-3">
-                <article>
-                    <h1>Hola!</h1>
-                </article>
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div> 
 </div>
-
 

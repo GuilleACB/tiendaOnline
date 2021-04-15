@@ -5,11 +5,12 @@ import { SharedModule } from '../shared/shared.module';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { ContactBoardComponent } from './pages/contact-board/contact-board.component';
+import { GlobalComponent } from './pages/global/global.component';
+
 
 
 @NgModule({
-  declarations: [ContactBoardComponent],
+  declarations: [GlobalComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
