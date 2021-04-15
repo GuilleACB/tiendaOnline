@@ -8,11 +8,12 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { GlobalComponent } from './pages/global/global.component';
 import { DatosEmpresaComponent } from './pages/datos-empresa/datos-empresa.component';
 import { MensajesContactoComponent } from './pages/mensajes-contacto/mensajes-contacto.component';
+import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
 
 
 
 @NgModule({
-  declarations: [GlobalComponent, DatosEmpresaComponent, MensajesContactoComponent],
+  declarations: [GlobalComponent, DatosEmpresaComponent, MensajesContactoComponent, ConfiguracionComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
