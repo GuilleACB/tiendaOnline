@@ -5,16 +5,11 @@ import { PoliticaDeCookiesComponent } from './pages/politica-de-cookies/politica
 import { PoliticaDePrivacidadComponent } from './pages/politica-de-privacidad/politica-de-privacidad.component';
 import { AvisoLegalComponent } from './pages/aviso-legal/aviso-legal.component';
 
-const routes: Routes = [{
-  path: '',
-  children: [
-    { path: 'home', component: HomeComponent },
-    { path: 'politica-de-cookies', component: PoliticaDeCookiesComponent },
-    { path: 'politica-de-privacidad', component: PoliticaDePrivacidadComponent },
-    { path: 'aviso-legal', component: AvisoLegalComponent },
-    { path: '**', redirectTo:'home'}
-  ]
-}
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'politica-de-cookies', component: PoliticaDeCookiesComponent },
+  { path: 'politica-de-privacidad', component: PoliticaDePrivacidadComponent },
+  { path: 'aviso-legal', component: AvisoLegalComponent }
 ];
 
 @NgModule({
