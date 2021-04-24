@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,14 +19,23 @@ export class HomeComponent implements OnInit {
                          viviendas particulares.`;
 
   colaborador_logo: string = '../../assets/img/Ocaso_logo.JPG';
-  colaborador_logo_des: string = 'Descripción colaboración';     
+  colaborador_logo_des: string = 'Descripción colaboración';
   colaborador_2_logo: string = '../../assets/img/SantaLucia_logo.JPG';
   colaborador_2_logo_des: string = 'Descripción colaboración';
-               
-                         
-  constructor() { }
+
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  clickQueHacemos(event) {
+    let idAttr : string;
+    idAttr = event.target.attributes.id.nodeValue;
+    console.log(idAttr);
+
+    this.router.navigate(['web/que-hacemos'], { queryParams: { filter:idAttr}} );
+    
   }
 
 }

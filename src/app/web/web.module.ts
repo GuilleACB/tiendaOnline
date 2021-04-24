@@ -8,6 +8,7 @@ import { PoliticaDePrivacidadComponent } from './pages/politica-de-privacidad/po
 import { AvisoLegalComponent } from './pages/aviso-legal/aviso-legal.component';
 import { SharedModule } from '../shared/shared.module';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { QueHacemosComponent } from './pages/que-hacemos/que-hacemos.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     HomeComponent,
     PoliticaDeCookiesComponent,
     PoliticaDePrivacidadComponent,
-    AvisoLegalComponent],
+    AvisoLegalComponent,
+    QueHacemosComponent],
   imports: [
     CommonModule,
     WebRoutingModule,

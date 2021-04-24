@@ -4,12 +4,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { PoliticaDeCookiesComponent } from './pages/politica-de-cookies/politica-de-cookies.component';
 import { PoliticaDePrivacidadComponent } from './pages/politica-de-privacidad/politica-de-privacidad.component';
 import { AvisoLegalComponent } from './pages/aviso-legal/aviso-legal.component';
+import { QueHacemosComponent } from './pages/que-hacemos/que-hacemos.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'politica-de-cookies', component: PoliticaDeCookiesComponent },
   { path: 'politica-de-privacidad', component: PoliticaDePrivacidadComponent },
-  { path: 'aviso-legal', component: AvisoLegalComponent }
+  { path: 'aviso-legal', component: AvisoLegalComponent },
+  { path: 'que-hacemos', component: QueHacemosComponent }
 ];
 
 @NgModule({
