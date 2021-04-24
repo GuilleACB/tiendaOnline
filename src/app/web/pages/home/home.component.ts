@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
   colaborador_logo: string = '../../assets/img/Ocaso_logo.JPG';
   colaborador_logo_des: string = 'Descripción colaboración';     
   colaborador_2_logo: string = '../../assets/img/SantaLucia_logo.JPG';
-  colaborador_2_logo_des: string = 'Descripción colaboración';                   
+  colaborador_2_logo_des: string = 'Descripción colaboración';
+               
                          
   constructor() { }
 

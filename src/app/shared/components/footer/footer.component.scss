@@ -1,5 +1,5 @@
-$link-light-grey: #6c757d;
-$primary-orange: #fec503; //before: fed136
+$link-light-grey: #212529;
+$primary-orange:  #FF984D;; //before: fed136
 $footer-background-light-grey: #212529;
 $footer-background-grey: #1a1d20;
 $social-buttons-circle-dark-grey: #1a1d20;
@@ -26,7 +26,7 @@ a:hover {
 
 footer {
   padding: 2rem 0;
-  background-color: #212529;
+  background-color:#ffffff ;
   // .container .row:not(:last-child) {
   //   padding-bottom: 2rem;
   // }
@@ -51,8 +51,8 @@ footer {
     }
     span.footer-title {
       font-size: 14px;
-      font-weight: 700;
-      color: #fff;
+      font-weight: 900;
+      color: #212529;
       text-transform: uppercase;
     }
     .fas {
@@ -87,10 +87,14 @@ ul.social-buttons li a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  color: #fff;
+  color: #212529;
   border-radius: 100%;
   outline: 0;
-  background-color: $footer-background-grey;
+  background-color: rgb(247, 247, 247);
+  box-shadow: inset 0px 7px 17px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 7px 17px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgb(209, 209, 209);
+
 }
 
 footer .quick-links {
@@ -102,7 +106,7 @@ footer .quick-links {
 }
 
 .copyright {
-  color: white;
+  color: #212529;
 }
 
 .fa-ellipsis-h {
