@@ -8,6 +8,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/user/login/login.component';
+import { PopupLegalComponent } from './components/popup-legal/popup-legal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginComponent } from './components/user/login/login.component';
      JumbotronComponent,
      ContactFormComponent,
      FooterComponent,
-     LoginComponent
+     LoginComponent,
+     PopupLegalComponent
     ],
   imports: [
     CommonModule,
