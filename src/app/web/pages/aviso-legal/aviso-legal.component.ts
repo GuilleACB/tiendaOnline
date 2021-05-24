@@ -54,21 +54,21 @@ export class AvisoLegalComponent implements OnInit {
 
   getAvisoLegal(): AvisoLegal{
     return {
-      denominacionSocial: '_denominacionSocial_',
-      nombreComercial: '_nombreComercial_',
-      domicilio: '_domicilio_',
-      cif: 'rellenarEmpresa',
-      emailEmpresa: '_cif_',
-      telefono: '_telefono_',
-      sitioWeb: '_sitioWeb_',
-      registroMercantil: '_registroMercantil_',
-      tomoMercantil: '_tomoMercantil_',
-      libroMercantil: '_libroMercantil_',
-      folioMercantil: '_folioMercantil_',
-      hojaMercantil: '_hojaMercantil_',
-      inscripcionMercantil: '_inscripcionMercantil_',
-      nombreEmpresa: '_nombreEmpresa_',
-      ciudadTribunal: '_ciudadTribunal_'
+      denominacionSocial: 'Calidad Creativa Solfeter S.L',
+      nombreComercial: 'Solfeter Reforma-Hogar',
+      domicilio: 'Alarico López Teruel n 5',
+      cif: 'B-045990411',
+      emailEmpresa: 'calidadcreativa@yahoo.com',
+      telefono: '965404705',
+      sitioWeb: 'www.solfeter.es',
+      registroMercantil: 'Registro Mercantil de Alicante',
+      tomoMercantil: '4366',
+      libroMercantil: '0',
+      folioMercantil: '140',
+      hojaMercantil: 'A 173872',
+      inscripcionMercantil: '1',
+      nombreEmpresa: 'Calidad Cretiva Solfeter S.L.',
+      ciudadTribunal: 'Crevillente'
     };
   }
 
