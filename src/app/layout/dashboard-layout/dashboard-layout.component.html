@@ -22,7 +22,6 @@
             <div class="position-sticky pt-3">
                 <ul class="nav nav-list flex-column">
 
-
                     <li>
                         <a class="nav-link " aria-current="page" routerLink="/dashboard">
                             <span data-feather="home"></span>
@@ -30,7 +29,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-header">Configuración</li>
+                    <li class="m-2 nav-header">Configuración</li>
                     <li>
                         <a class="nav-link" routerLink="/dashboard/configuracion">
                             <span data-feather="file"></span>
@@ -44,7 +43,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-header">Mensajes</li>
+                    <li class="m-2 nav-header">Mensajes</li>
                     <li>
                         <a class="nav-link" routerLink="/dashboard/mensajes-contacto">
                             <span data-feather="file"></span>
@@ -69,7 +68,8 @@
 
 
                     <li class="d-grid d-md-block m-2">
-                        <button class="btn btn-dark" (click)="onLogout()">Salir</button>
+                       
+                        <button class="btn btn-dark " (click)="onLogout()">  <i class="fas fa-sign-out-alt"></i> Salir</button>
                     </li>
                 </ul>
             </div>

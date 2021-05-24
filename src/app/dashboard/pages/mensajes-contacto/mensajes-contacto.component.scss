@@ -3,6 +3,12 @@ button{
     border: none;
 }
 
+p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
 
 .button-edit{
     font-size: 1em;
