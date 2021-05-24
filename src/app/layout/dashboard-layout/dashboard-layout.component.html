@@ -1,43 +1,82 @@
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" routerLink="/dashboard">Company name</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" (click)="onLogout()">Salir</a>
+        </li>
+    </ul>
+-->
+
+</header>
+
 <div class="container-fluid">
-    <div class="row min-vh-100 flex-column flex-md-row">
-        <aside class="col-12 col-md-3 col-xl-2 p-0 bg-dark flex-shrink-1">
-            <nav class="navbar navbar-expand-md navbar-dark bd-dark
-             flex-md-column flex-row align-items-center py-2 text-center 
-             sticky-top" id="sidebar">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="position-sticky pt-3">
+                <ul class="nav nav-list flex-column">
 
-                <div class="text-center p-3">
-                    <img src="https://handmadebase.com/wp-content/uploads/data/10-24.jpg" alt="profile picture"
-                        class="img-fluid rounded-cicle my-4 p1 d-none d-md-block shadow">
-                        <a routerLink="/dashboard" class="navbar-brand mx-0 font-weight-bold text-nowrap">Panel de Control</a>
-                </div>
+                    <li>
+                        <a class="nav-link " aria-current="page" routerLink="/dashboard">
+                            <span data-feather="home"></span>
+                            Global
+                        </a>
+                    </li>
 
-                <div class="p-3">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+                    <li class="m-2 nav-header">Configuración</li>
+                    <li>
+                        <a class="nav-link" routerLink="/dashboard/configuracion">
+                            <span data-feather="file"></span>
+                            Configuración
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" routerLink="/dashboard/datos-empresa">
+                            <span data-feather="shopping-cart"></span>
+                            Datos de empresa
+                        </a>
+                    </li>
 
-                <div class=" collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav flex-column w-100 justify-content-center">
-                        <li class="nav-item">
-                            <a routerLink="/dashboard/datos-empresa" class="nav-link avtive">Editar datos Empresa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a routerLink="/dashboard/mensajes-contacto" class="nav-link avtive">Leer Mensajes</a>
-                        </li>
-                        <li class="nav-item">
-                            <p class="nav-link avtive" (click)="onLogout()">Salir {{currentUser}}</p>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </aside>
-        <div class="col px-0 flex-grow-1">
-            <div class="container py-3">
-                <router-outlet></router-outlet>
+                    <li class="m-2 nav-header">Mensajes</li>
+                    <li>
+                        <a class="nav-link" routerLink="/dashboard/mensajes-contacto">
+                            <span data-feather="file"></span>
+                            <div class="fas fa-inbox"></div>
+                            Entrada
+                            <span class="badge badge-pill badge-warning text-primary ">7</span>
+                        </a>
+                        <a class="nav-link" routerLink="/dashboard/mensajes-contacto">
+                            <span data-feather="file"></span>
+                            <div class="fas fa-glasses"></div>
+                            Leidos
+                            <span class="badge badge-pill badge-warning text-primary ">0</span>
+                        </a>
+                        <a class="nav-link" routerLink="/dashboard/mensajes-contacto">
+                            <span data-feather="file"></span>
+                            <div class="fas fa-trash"></div>
+                            Borrados
+                            <span class="badge badge-pill badge-warning text-primary ">0</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="d-grid d-md-block m-2">
+                       
+                        <button class="btn btn-dark " (click)="onLogout()">  <i class="fas fa-sign-out-alt"></i> Salir</button>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </div> 
-</div>
+        </nav>
 
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>
