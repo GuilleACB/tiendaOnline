@@ -32,10 +32,10 @@ export class PoliticaDePrivacidadComponent implements OnInit {
 
   getPoliticaDePrivacidad(): PoliticaDePrivacidad{
     return {
-      nombreEmpresa:  '_nombreEmpresa_',
-      sitioWeb: '_urlWeb_',
-      correoEmpresa:  '_correoEmpresa_',
-      facebook:  '_facebookUrl_'
+      nombreEmpresa:  'Calidad Creativa Solfeter S.L.',
+      sitioWeb: 'www.solfeter.es',
+      correoEmpresa:  'calidadcreativa@yahoo.com',
+      facebook:  'https://www.facebook.com/solfeter.calidadcreativa'
     };
   }
 

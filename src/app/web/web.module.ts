@@ -8,6 +8,14 @@ import { PoliticaDePrivacidadComponent } from './pages/politica-de-privacidad/po
 import { AvisoLegalComponent } from './pages/aviso-legal/aviso-legal.component';
 import { SharedModule } from '../shared/shared.module';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { QueHacemosComponent } from './pages/que-hacemos/que-hacemos.component';
+import { QhFontaneriaComponent } from './pages/qh-fontaneria/qh-fontaneria.component';
+import { QhCristaleriaComponent } from './pages/qh-cristaleria/qh-cristaleria.component';
+import { QhPinturaComponent } from './pages/qh-pintura/qh-pintura.component';
+import { QhElectricidadComponent } from './pages/qh-electricidad/qh-electricidad.component';
+import { QharquitecturaComponent } from './pages/qharquitectura/qharquitectura.component';
+import { QhtoldosComponent } from './pages/qhtoldos/qhtoldos.component';
+import { QhAireComponent } from './pages/qh-aire/qh-aire.component';
 
 
 @NgModule({
@@ -15,7 +23,15 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     HomeComponent,
     PoliticaDeCookiesComponent,
     PoliticaDePrivacidadComponent,
-    AvisoLegalComponent],
+    AvisoLegalComponent,
+    QueHacemosComponent,
+    QhFontaneriaComponent,
+    QhCristaleriaComponent,
+    QhPinturaComponent,
+    QhElectricidadComponent,
+    QharquitecturaComponent,
+    QhtoldosComponent,
+    QhAireComponent],
   imports: [
     CommonModule,
     WebRoutingModule,
