@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SharedRoutingModule } from './shared-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { CookiesPopupComponent } from './components/cookies-popup/cookies-popup.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
      JumbotronComponent,
      ContactFormComponent,
-     FooterComponent
+     FooterComponent,
+     LoginComponent,
+     CookiesPopupComponent
     ],
   imports: [
     CommonModule,
@@ -26,7 +29,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
      JumbotronComponent,
      ContactFormComponent,
-     FooterComponent
+     FooterComponent,
+     CookiesPopupComponent
   ]
 })
 export class SharedModule { }

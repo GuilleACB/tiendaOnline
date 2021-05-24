@@ -9,11 +9,29 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+
 
 <body>
-  <app-root></app-root>
   
+
+  <app-root></app-root>
+
+  <div class="alert text-center cookiealert position-fixed " role="alert">
+    <b>Esta página web usa cookies</b> &#x1F36A; Solfeter.es utiliza cookies propias y de terceros que permiten mejorar la usabilidad de navegación y recopilar información. No se utilizarán las cookies para recoger información de carácter personal. Solo se instalarán las cookies no esenciales para la navegación si acepta esta característica. <a
+    href="/web/politica-de-cookies" target="_blank">Aprender más</a>
+
+    <button (click)="onClick($event)" type="button" class="btn btn-primary btn-sm acceptcookies">
+      Acepto
+    </button>
+  </div>
+
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+
 
 </html>

@@ -1,0 +1,27 @@
+.card{
+   border-radius: 18px;
+   background:#f5f5f5;
+   box-shadow: 13px 13px 20px #cbced1;
+   border:none;
+}
+
+.card-title{
+color: #ff6a00c9;
+text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.20);
+text-transform: uppercase;
+font-weight: bold;
+}
+
+.form-control{
+    box-shadow:  inset 4px 4px 8px #cbced1;
+    border: none;
+    margin-top: 12px;
+             
+}
+.btn{
+    background-color:#ff6a00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px #cbced1;
+}

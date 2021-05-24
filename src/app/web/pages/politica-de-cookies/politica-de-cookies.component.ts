@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PoliticaDeCookies } from '../../../model/IPoliticaDeCookies';
 
 @Component({
   selector: 'app-politica-de-cookies',
@@ -7,13 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PoliticaDeCookiesComponent implements OnInit {
 
+  politicaDeCookies : PoliticaDeCookies;
 
-  nombreDeEmpresa: string = 'mi empresa';
-  correoDeEmpresa: string = 'mi correo de empresa';
+  nombreDeEmpresa: string;
+  correoDeEmpresa: string;
+  
 
-  constructor() { }
+  constructor() {
+
+    this.politicaDeCookies = this.getPoliticaDeCookies();
+
+    this.nombreDeEmpresa = this.politicaDeCookies.nombreDeEmpresa;
+    this.correoDeEmpresa = this.politicaDeCookies.correoDeEmpresa;
+
+   }
 
   ngOnInit(): void {
+  }
+
+  getPoliticaDeCookies(): PoliticaDeCookies{
+    return {
+      nombreDeEmpresa:  'Calidad Creativa Solfeter S.L.',
+      correoDeEmpresa:  'calidadcreativa@yahoo.com'
+    };
   }
 
 }

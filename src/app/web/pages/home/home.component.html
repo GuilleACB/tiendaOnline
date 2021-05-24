@@ -5,7 +5,7 @@
 
 <!-- Título-->
 <div class="mt-4 text-center d-flex justify-content-center align-items-center">
-    <h1 class="display-8">
+    <h1 class="title">
         {{title}}
     </h1>
 </div>
@@ -17,48 +17,164 @@
         <div class="text-center">
             <p class="" [innerHTML]="paragraphs1"></p>
             <p class="" [innerHTML]="paragraphs2"></p>
+            <p class="" [innerHTML]="paragraphs3"></p>
+            <!--<p class="" [innerHTML]="paragraphs4"></p>-->
         </div>
     </div>
 
-    <div id="contactForm" class="col mt-4">
-        <app-contact-form></app-contact-form>
+    <div id="contactForm" class="col mt-4" >
+        <!--<app-contact-form></app-contact-form>-->
+        <img src="../../../../assets/img/logoSolfeter.jpg" alt="" class="img-fluid">
     </div>
 </div>
 
 <!-- Que hacemos-->
 
-<!-- Título-->
-<div class="mt-4 text-center d-flex justify-content-center align-items-center">
-    <h3 class="display-8">
-        QUE HACEMOS
-    </h3>
+<div class="que-hacemos-section mt-5 text-center d-flex justify-content-center align-items-center" id="queHacemos">
+    <div class=" d-flex flex-column">
+        <h3 class="display-6 mt-3">
+            <b>QUE HACEMOS</b>
+        </h3>
+        <div class="linea"></div>
+        <h5 class="mt-3">Servicios que ofrecemos</h5>
+    </div>
 </div>
 
-<div class=" mt-4 row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4 row-cols-xl-4">
+<div class=" mt-4 row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4">
     <div class="container ">
-        <div class="text-center d-flex justify-content-center align-items-center">
-            <div class=" d-flex flex-column">
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center">
+            <a routerLink="/web/que-hacemos">
+            <div class="card d-flex flex-column">
                 <!--Icono-->
                 <!--titulo-->
-                <h4> FABRICAMOS </h4>
-                <P>Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit.
-                    Unde quasi repellendus repudiandae
-                    ea fugiat! Ipsam sapiente pariatur amet,
-                    nulla minus praesentium magni corrupti vero
-                    modi placeat sed expedita distinctio ab.</P>
+                <div class="box">
+                <h4 class="mt-3"><strong>Carpintería Metálica</strong></h4>
             </div>
+            </div>
+        </a>
         </div>
     </div>
     <div class="container ">
-        <div class="text-center d-flex justify-content-center align-items-center"> hola 2</div>
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center">
+            <a routerLink="/web/app-qh-fontaneria">
+            <div class="card d-flex flex-column">
+                <div class="box">
+                <h4 class="mt-3"><strong>Fontanería</strong></h4>
+            </div>
+            </div>
+        </a>
+        </div>
+    </div>
+   
+    <div class="container">
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center">
+            <a routerLink="/web/app-qh-pintura">
+            <div class="card d-flex flex-column">
+                <div class="box">
+                <h4 class="mt-3"><strong>Albañilería</strong></h4>
+            </div>
+            </div>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class=" mt-4 row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4">
+    <!--<div class="container ">
+        <div class=" mt-4 text-center d-flex justify-content-center align-items-center">
+            <a routerLink="/web/app-qh-electricidad">
+            <div class="card d-flex flex-column">
+                <div class="box">
+                <h4 class="mt-3"><strong>electricidad</strong></h4>
+            </div>
+            </div>
+        </a>
+        </div>
+    </div>-->
+    <div class="container ">
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center">
+            <a routerLink="/web/app-qh-cristaleria">
+            <div class="card d-flex flex-column">
+                <div class="box">
+                <h4 class="mt-3"><strong>Cristalería</strong></h4>
+            </div>
+            </div>
+        </a>
+        </div>
     </div>
     <div class="container ">
-        <div class="text-center d-flex justify-content-center align-items-center"> hola 3</div>
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center">
+            <a routerLink="/web/app-qh-arquitectura">
+            <div class="card d-flex flex-column">
+                <div class="box">
+                <h4 class="mt-3"><strong>Arquitectura y Planos</strong></h4>
+            </div>
+            </div>
+        </a>
+        </div>
     </div>
     <div class="container ">
-        <div class="text-center d-flex justify-content-center align-items-center"> hola 4</div>
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center">
+            <a routerLink="/web/app-qh-toldos">
+            <div class="card d-flex flex-column">
+                <div class="box">
+                <h4 class="mt-3"><strong>Toldos</strong></h4>
+            </div>
+            </div>
+        </a>
+        </div>
     </div>
+   <!-- <div class="container ">
+        <div class="mt-4 text-center d-flex justify-content-center align-items-center">
+            <a routerLink="/web/app-qh-aire">
+            <div class="card d-flex flex-column">
+                <div class="box">
+                <h4 class="mt-3"><strong>Aire Acondicionado</strong></h4>
+            </div>
+            </div>
+        </a>
+        </div>
+    </div>
+-->
+</div>
+
+
+<div class="mt-4 que-hacemos-section text-center d-flex justify-content-center align-items-center">
+    <div class=" d-flex flex-column">
+        <h3 class="display-6 ">
+           <b> COLABORADORES </b>
+        </h3>
+        <div class="linea"></div>
+      
+    </div>
+</div>
+
+<div class=" mt-4 row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4">
+
+    <div class="container mt-4">
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <div class=" d-flex flex-column">
+                <img src="{{colaborador_logo}}" alt="{{colaborador_logo_des}}" style="width:200px;height:100px;">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <div class=" d-flex flex-column">
+                <img src="{{colaborador_2_logo}}" alt="{{colaborador_2_logo_des}}" style="width:200px;height:100px;">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="text-center d-flex justify-content-center align-items-center">
+            <div class=" d-flex flex-column">
+                <img src="../../../../assets/img/homeserve-vector-logo.svg" alt="{{colaborador_logo_des}}" style="width:200px;height:100px;">
+            </div>
+        </div>
+    </div>
+</div>
+
 </div>
 
 <!-- Proyectos -->
