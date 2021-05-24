@@ -8,7 +8,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/user/login/login.component';
-import { PopupLegalComponent } from './components/popup-legal/popup-legal.component';
+import { CookiesPopupComponent } from './components/cookies-popup/cookies-popup.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { PopupLegalComponent } from './components/popup-legal/popup-legal.compon
      ContactFormComponent,
      FooterComponent,
      LoginComponent,
-     PopupLegalComponent
+     CookiesPopupComponent
     ],
   imports: [
     CommonModule,
@@ -29,7 +29,8 @@ import { PopupLegalComponent } from './components/popup-legal/popup-legal.compon
     NavbarComponent,
      JumbotronComponent,
      ContactFormComponent,
-     FooterComponent
+     FooterComponent,
+     CookiesPopupComponent
   ]
 })
 export class SharedModule { }

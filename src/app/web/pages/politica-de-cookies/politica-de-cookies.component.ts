@@ -28,8 +28,8 @@ export class PoliticaDeCookiesComponent implements OnInit {
 
   getPoliticaDeCookies(): PoliticaDeCookies{
     return {
-      nombreDeEmpresa:  '_mi empresa_',
-      correoDeEmpresa:  '_mi correo de empresa_'
+      nombreDeEmpresa:  'Calidad Creativa Solfeter S.L.',
+      correoDeEmpresa:  'calidadcreativa@yahoo.com'
     };
   }
 
