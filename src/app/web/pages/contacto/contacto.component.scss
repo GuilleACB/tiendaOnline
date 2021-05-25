@@ -1,0 +1,69 @@
+.cabecera{
+    margin-top: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+    color: #212529;
+}
+
+.lista{
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.informacion{
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+iframe{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #bfbfbf;
+    margin-top: 40px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+}
+
+.card-group{
+    margin-top: 25px;
+
+    .card{
+        margin: 15px 15px 15px 15px;
+        box-shadow: inset 0px 7px 17px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 7px 17px rgba(0, 0, 0, 0.25);
+        border: none;
+        transition: 0.5s;
+    }
+
+    .card:hover{
+        transform: translateY(-15px);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+        
+    }
+    
+}
+
+.buttonSection{
+    margin-top: 15px;
+    .btn{
+        background-color: rgba(253, 109, 25, 0.877);
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+
+    .btn:hover{
+        background-color: rgba(255, 255, 255, 0.877);
+        color: black;
+        border: solid 3px rgba(253, 109, 25, 0.877);
+    }
+}

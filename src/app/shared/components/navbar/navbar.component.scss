@@ -20,7 +20,11 @@
 
 .nav-link{
     color:#212529;
-    font-weight: 600; 
+    font-weight: 900; 
+}
+
+.nav-link:hover{
+  color:rgba(255, 147, 85, 0.677);
 }
 
 
@@ -43,7 +47,27 @@ nav {
     font-size: 17px;
   }
   nav a:hover {
-    border-bottom: 4px solid rgba(255, 147, 85, 0.677);
-    border-radius: 4px;
-    padding: 4px 0; 
+    border-bottom: 3px solid rgba(255, 147, 85, 0.677);
+    border-radius: 1px;
+    padding: 8px 0; 
+  
   }
+
+  .boxContacto{
+    text-align: right;
+    .phone{
+      margin-right: 25px;
+      font-weight: 800;
+      color:#212529a3
+    }
+    .phoneNumber{
+      text-decoration: none;
+      color: #212529;
+    }
+    .phoneNumber:hover{
+      color: rgba(255, 147, 85, 0.677);
+    }
+  }
+
+
+
