@@ -26,9 +26,9 @@ export class HomeComponent implements OnInit {
   /*paragraphs4: string = `Un sueño, una ilusión, esa reforma que tienes penado hacer en tu hogar y que no haces porque no encuentras tiempo ni profesionales, SOLFETER REFORMA-HOGAR
   es tu solución, cuentanos tu sueño, cuentanos tu ilusión, hablanos de esa reforma aplazada en el tiempo. Nosotros convertimos tus sueños y ilusiones en realidad.`;*/
 
-  colaborador_logo: string = '../../assets/img/Ocaso_logo.JPG';
+  colaborador_logo: string = '../../assets/img/surface1 (1).svg';
   colaborador_logo_des: string = 'Descripción colaboración';
-  colaborador_2_logo: string = '../../assets/img/SantaLucia_logo.JPG';
+  colaborador_2_logo: string = '../../assets/img/layer1 (1).svg';
   colaborador_2_logo_des: string = 'Descripción colaboración';
 
 
