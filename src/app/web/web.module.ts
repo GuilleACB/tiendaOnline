@@ -15,7 +15,7 @@ import { QhPinturaComponent } from './pages/qh-pintura/qh-pintura.component';
 import { QhElectricidadComponent } from './pages/qh-electricidad/qh-electricidad.component';
 import { QharquitecturaComponent } from './pages/qharquitectura/qharquitectura.component';
 import { QhtoldosComponent } from './pages/qhtoldos/qhtoldos.component';
-import { QhAireComponent } from './pages/qh-aire/qh-aire.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { QhAireComponent } from './pages/qh-aire/qh-aire.component';
     QhElectricidadComponent,
     QharquitecturaComponent,
     QhtoldosComponent,
-    QhAireComponent],
+    ContactoComponent],
   imports: [
     CommonModule,
     WebRoutingModule,

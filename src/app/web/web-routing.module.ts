@@ -6,7 +6,7 @@ import { PoliticaDePrivacidadComponent } from './pages/politica-de-privacidad/po
 import { AvisoLegalComponent } from './pages/aviso-legal/aviso-legal.component';
 
 import { QueHacemosComponent } from './pages/que-hacemos/que-hacemos.component';
-import { QhAireComponent } from './pages/qh-aire/qh-aire.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
 import { QhCristaleriaComponent } from './pages/qh-cristaleria/qh-cristaleria.component';
 import { QhElectricidadComponent } from './pages/qh-electricidad/qh-electricidad.component';
 import { QhPinturaComponent } from './pages/qh-pintura/qh-pintura.component';
@@ -25,7 +25,7 @@ const routes: Routes = [
 
   // Que hacemos: 
   { path: 'que-hacemos', component: QueHacemosComponent }, // carpinteria metalica
-  { path: 'app-qh-aire', component: QhAireComponent },
+  { path: 'app-contacto', component: ContactoComponent },
   { path: 'app-qh-electricidad', component: QhElectricidadComponent },
   { path: 'app-qh-pintura', component: QhPinturaComponent },
   { path: 'app-qh-arquitectura', component: QharquitecturaComponent },
