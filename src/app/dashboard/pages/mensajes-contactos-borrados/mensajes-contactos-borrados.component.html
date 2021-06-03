@@ -1,0 +1,39 @@
+<h2>Papelera</h2>
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="row-cols-sm-1">
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary fas fa-search"></button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="container">
+  <div class="mt-2">Hoy</div>
+    <div *ngFor="let mensaje of mensajes">
+
+      <div class="card m-2 "  *ngIf="mensaje.estado === 'BORRADO'">
+        <div class="card-body">
+          <h5 class="card-title">{{ mensaje.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            {{ mensaje.fecha_hora | date: "medium"}}
+          </h6>
+          <p class="card-text">{{ mensaje.message }}</p>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-danger m-2" (click)="onClickBorrar(mensaje)"><i class="fas fa-trash"></i> Borrar</button>
+          </div>
+        </div>
+      </div>
+
+
+
+  </div>
+</div>
+
+
