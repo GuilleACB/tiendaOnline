@@ -1,32 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
-import { ContactMessageService } from 'src/app/service/contact-message.service';
-import { NgIf } from '@angular/common';
 import { map } from 'rxjs/operators';
-import { MensajesContactosLeidosComponent } from 'src/app/dashboard/pages/mensajes-contactos-leidos/mensajes-contactos-leidos.component';
+import { ContactMessageService } from 'src/app/service/contact-message.service';
 
 @Component({
   selector: 'app-dashboard-layout',
   templateUrl: './dashboard-layout.component.html',
   styleUrls: ['./dashboard-layout.component.scss'],
 })
-export class DashboardLayoutComponent implements OnInit {
 
+export class DashboardLayoutComponent implements OnInit {
   nMnsEntrada: number = 0;
   nMnsLeidos: number = 0;
-  nMnsBorrados: number = 0;
 
   currentUser: string = '';
+  mensajes: any;
 
   constructor(
     public authService: AuthService,
     private router: Router,
     private contactMessageServer: ContactMessageService
+
   ) {}
 
   ngOnInit(): void {
-    this.actualizarContadorMensajes()
+    this.actualizarContadorMensajes();
 
     /*
     this.authService.getCurrentUser().then(res =>{
@@ -44,6 +43,7 @@ export class DashboardLayoutComponent implements OnInit {
     }
   }
 
+
   actualizarContadorMensajes() {
     this.contactMessageServer
       .getMessajes()
@@ -57,28 +57,21 @@ export class DashboardLayoutComponent implements OnInit {
         )
       )
       .subscribe((mensajes) => {
-
         this.nMnsLeidos = 0;
         this.nMnsEntrada = 0;
-        this.nMnsBorrados = 0;
 
-        mensajes.forEach(msn=>{
-          switch(msn.estado){
-            case 'LEIDO':{
+        mensajes.forEach((msn) => {
+          switch (msn.estado) {
+            case 'LEIDO': {
               this.nMnsLeidos++;
               break;
             }
-            case 'BORRADO':{
-              this.nMnsBorrados++;
-              break;
-            }
-            default:{
+            default: {
               this.nMnsEntrada++;
               break;
             }
           }
-        })
-
+        });
       });
   }
 }

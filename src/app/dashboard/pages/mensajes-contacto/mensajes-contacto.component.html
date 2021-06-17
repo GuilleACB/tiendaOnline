@@ -26,13 +26,12 @@
           <p class="card-text">{{ mensaje.message }}</p>
           <div class="d-flex justify-content-end">
             <button type="button" class="btn btn-primary m-2" (click)="onClickVer(mensaje)"><i class="fas fa-glasses"></i> Leido </button>
-            <button type="button" class="btn btn-danger m-2" (click)="onClickBorrar(mensaje)"><i class="fas fa-trash"></i> Papelera</button>
           </div>
         </div>
       </div>
   </div>
 
-  <div class="mt-2">Esta semana</div>
+  <div class="mt-2">Antiguos</div>
   <div *ngFor="let mensaje of mensajes">
     <div class="card m-2 "  *ngIf="!mensaje.estado && (mensaje.fecha_hora | date:'yyyy-MM-dd') !== dateNow && (mensaje.fecha_hora | date:'yyyy-MM') === thisWeek ">
       <div class="card-body">
@@ -43,27 +42,8 @@
         <p class="card-text">{{ mensaje.message }}</p>
         <div class="d-flex justify-content-end">
           <button type="button" class="btn btn-primary m-2" (click)="onClickVer(mensaje)"><i class="fas fa-glasses"></i> Leido </button>
-          <button type="button" class="btn btn-danger m-2" (click)="onClickBorrar(mensaje)"><i class="fas fa-trash"></i> Papelera</button>
         </div>
       </div>
     </div>
 </div>
-
-<div class="mt-2">Antiguos</div>
-  <div *ngFor="let mensaje of mensajes">
-    <div class="card m-2 "  *ngIf="!mensaje.estado && (mensaje.fecha_hora | date:'yyyy-MM') !== thisWeek ">
-      <div class="card-body">
-        <h5 class="card-title">{{ mensaje.name }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">
-          {{ mensaje.fecha_hora | date: "medium"}}
-        </h6>
-        <p class="card-text">{{ mensaje.message }}</p>
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-primary m-2" (click)="onClickVer(mensaje)"><i class="fas fa-glasses"></i> Leido </button>
-          <button type="button" class="btn btn-danger m-2" (click)="onClickBorrar(mensaje)"><i class="fas fa-trash"></i> Papelera</button>
-        </div>
-      </div>
-    </div>
-</div>
-
 </div>

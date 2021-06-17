@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Message } from '../model/IMessage';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-} from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { map, timeInterval, timestamp } from 'rxjs/operators';
+import {AngularFirestore,AngularFirestoreCollection,} from '@angular/fire/firestore';
 import { InfMsg } from '../model/InfMsg';
-import { stringify } from '@angular/compiler/src/util';
+
 
 @Injectable({
   providedIn: 'root',
