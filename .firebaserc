@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "tiendaonline-7d4c0"
+    "default": "tiendaonline-7d4c0",
+    "cristaleriaTest": "cristaleriatest"
   }
 }
