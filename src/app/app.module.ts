@@ -20,11 +20,12 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     WebLayoutComponent,
-    DashboardLayoutComponent,
+    DashboardLayoutComponent
 
   ],
   imports: [

@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
 
   public isError = false;
 
+
   ngOnInit() { }
 
   async onLogin() {
@@ -27,23 +28,26 @@ export class LoginComponent implements OnInit {
     try {
       const user = await this.authService.loginUser(email, password);
       if (user) {
-        //this.checkUserIsVerified(user);
-        console.log('User: ',user.email);
+        this.checkUserIsVerified(user);
+        //console.log('User: ',user.email);
         this.router.navigate(['dashboard']);
+      }else{
+        window.alert('Password o usuario incorrectos');
       }
     } catch (error) {
       console.log(error);
     }
   }
 
-  /*
+
   private checkUserIsVerified(user: User) {
-    if (user && user.emailVerified) {
+    //if (user && user.emailVerified) {
+    if (user) {
       this.router.navigate(['dashboard']);
     } else {
       this.router.navigate(['web']);
     }
-  }*/
+  }
 
   async onLogout() {
     try {

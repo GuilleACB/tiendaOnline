@@ -1,17 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Message } from '../model/IMessage'
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { map, timeInterval, timestamp } from 'rxjs/operators';
+import { Message } from '../model/IMessage';
+import {AngularFirestore,AngularFirestoreCollection,} from '@angular/fire/firestore';
 import { InfMsg } from '../model/InfMsg';
-import { stringify } from '@angular/compiler/src/util';
+
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ContactMessageService {
-
-  private contactosDB: AngularFirestoreCollection<Message>;
+  contactosDB: AngularFirestoreCollection<Message>;
 
   private response: String;
 
@@ -20,33 +17,55 @@ export class ContactMessageService {
   }
 
   /*
-  * Añadimos un mensaje a la DB
-  */
+   * Añadimos un mensaje a la DB
+   */
   async addMessaje(msg: Message): Promise<InfMsg> {
+
+    msg.fecha_hora = Date.now();
+
     try {
-      await this.contactosDB.add(msg).catch(error => this.response = 'error: addMensaje' + error);
+      await this.contactosDB
+        .add(msg)
+        .catch((error) => (this.response = 'error: addMensaje' + error));
       return {
         status: 'OK',
-        timeStamp: new Date().getTime().toString()
-      }
+        timeStamp: new Date().getTime().toString(),
+      };
     } catch (err) {
       console.log(Error, err);
       return {
         status: 'ERROR',
         timeStamp: new Date().getTime().toString(),
-        msg: 'Mensaje: ' + err
-      }
+        msg: 'Mensaje: ' + err,
+      };
     }
-
   }
 
-  getMessajes(msg: Message) {
-    return this.contactosDB.get().subscribe(
-      mensajes => {
-        mensajes.forEach(doc => {
-          console.log(doc.id, "=>", doc.data());
-        })
-      }
-    );
+  /*
+  *Recuperamos los mensajes
+  */
+  getMessajes(): AngularFirestoreCollection<Message> {
+    return this.contactosDB;
   }
+
+
+  /*
+  *Actualizamos el mensaje por su Id
+  */
+  updateMessajeById(key: string, value: any): Promise<void> {
+    return this.contactosDB.doc(key).update(value)
+          .catch(err => console.log(err));
+  }
+
+  /*
+  *Borramos el mensaje por su Id
+  */
+  deleteMessajeById(key: string): Promise<void> {
+    return this.contactosDB.doc(key).delete()
+    .catch(err => console.log(err));
+  }
+
+
+
+
 }

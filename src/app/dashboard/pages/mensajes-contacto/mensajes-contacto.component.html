@@ -1,116 +1,49 @@
-<h2>Mensajes </h2>
+<h2>Mensajes Entrada</h2>
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="row-cols-sm-1">
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary fas fa-search"></button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
 
 <div class="container">
-    <div class="row">
-        <div class="row-cols-sm-1">
-        <div class="input-group">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                aria-describedby="search-addon" />
-            <button type="button" class="btn btn-outline-primary fas fa-search"></button>
+  <div class="mt-2">Hoy</div>
+    <div *ngFor="let mensaje of mensajes">
+      <div class="card m-2 "  *ngIf="!mensaje.estado && (mensaje.fecha_hora | date:'yyyy-MM-dd') === dateNow ">
+        <div class="card-body">
+          <h5 class="card-title">{{ mensaje.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            {{ mensaje.fecha_hora | date: "medium"}}
+          </h6>
+          <p class="card-text">{{ mensaje.message }}</p>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-primary m-2" (click)="onClickVer(mensaje)"><i class="fas fa-glasses"></i> Leido </button>
+          </div>
         </div>
-    </div>
+      </div>
+  </div>
+
+  <div class="mt-2">Antiguos</div>
+  <div *ngFor="let mensaje of mensajes">
+    <div class="card m-2 "  *ngIf="!mensaje.estado && (mensaje.fecha_hora | date:'yyyy-MM-dd') !== dateNow && (mensaje.fecha_hora | date:'yyyy-MM') === thisWeek ">
+      <div class="card-body">
+        <h5 class="card-title">{{ mensaje.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          {{ mensaje.fecha_hora | date: "medium"}}
+        </h6>
+        <p class="card-text">{{ mensaje.message }}</p>
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-primary m-2" (click)="onClickVer(mensaje)"><i class="fas fa-glasses"></i> Leido </button>
+        </div>
+      </div>
     </div>
 </div>
-
-<div class="container">
-    <div class=" mt-2 row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
-
-        <div class="card m-2" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Nombre</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Hora y fecha</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.Some quick example text to build on the card title and make up the bulk of the
-                    card's contentSome quick example text to build on the card title and make up the bulk of the
-                    card's contentSome quick example text to build on the card title and make up the bulk of the
-                    card's content</p>
-                <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->    
-                <div class="d-flex justify-content-between">
-                    <button class="button-ver"><i class=" fas fa-book-reader"></i></button>
-                    <button class="button-borrar"><i class=" fas fa-trash"></i></button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card m-2" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Nombre</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Hora y fecha</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <div class="d-flex justify-content-between">
-                    <button class="button-ver"><i class=" fas fa-book-reader"></i></button>
-                    <button class="button-borrar"><i class=" fas fa-trash"></i></button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card m-2" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Nombre</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Hora y fecha</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <div class="d-flex justify-content-between">
-                    <button class="button-ver"><i class=" fas fa-book-reader"></i></button>
-                    <button class="button-borrar"><i class=" fas fa-trash"></i></button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card m-2" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Nombre</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Hora y fecha</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <div class="d-flex justify-content-between">
-                    <button class="button-ver"><i class=" fas fa-book-reader"></i></button>
-                    <button class="button-borrar"><i class=" fas fa-trash"></i></button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card m-2" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Nombre</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Hora y fecha</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <div class="d-flex justify-content-between">
-                    <button class="button-ver"><i class=" fas fa-book-reader"></i></button>
-                    <button class="button-borrar"><i class=" fas fa-trash"></i></button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card m-2" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Nombre</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Hora y fecha</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <div class="d-flex justify-content-between">
-                    <button class="button-ver"><i class=" fas fa-book-reader"></i></button>
-                    <button class="button-borrar"><i class=" fas fa-trash"></i></button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card m-2" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Nombre</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Hora y fecha</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <div class="d-flex justify-content-between">
-                    <button class="button-ver"><i class=" fas fa-book-reader"></i></button>
-                    <button class="button-borrar"><i class=" fas fa-trash"></i></button>
-                </div>
-            </div>
-        </div>
-
-
-
-    </div>
 </div>
