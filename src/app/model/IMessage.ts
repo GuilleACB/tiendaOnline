@@ -1,3 +1,4 @@
+export type STATUS = 'LEIDO' | 'BORRADO'
 export interface Message {
     $key?: string; //Angular necesita este campo.
     name: string;
@@ -5,4 +6,6 @@ export interface Message {
     email: string;
     message: string;
     politicalPrivacy: boolean;
+    fecha_hora?: number;
+    estado?:STATUS;
   }
