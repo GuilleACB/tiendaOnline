@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  title: string = 'Especialistas en cristal y carpintería metálica';
+  title: string = 'Especialistas en la reforma del hogar';
 
   paragraphs1: string = `<strong>Servicios de cristalería en Alicante</strong> en 1978 nace CRISTALERÍA SOL, un negocio familiar
   y que, con una trayectoria profesional dedicada a la industria del vidrio de más de 40 años, que ha sabido perdurar en el tiempo y transmitir
@@ -16,12 +16,10 @@ export class HomeComponent implements OnInit {
   y sobre todo una atención personalizada.
   `;
 
-  paragraphs2: string = ` Todos estos años de experiencia nos han servido para conocer de primera mano, las necesidades de todos nuestros clientes, por lo que después de reunir
-  un gran equipo de profesionales, hemos creado nuestra empresa SOLFETER REFORMA-HOGAR, en la cual ofrecemos un gran abanico de diferentes gremios tan demandados hoy en día.`;
+  paragraphs2: string = ` Somos un equipo de profesionales con gran experiencia en las reformas del hogar. `;
   
-  paragraphs3: string = `SOLFETER REFORMA-HOGAR, nace con la finalidad de proporcionar a nuestros clientes soluciones prácticas en todo tipo de reformas de hogar, apostando
-  por un trato personalizado, utilizando materiales de primera calidad y sobre todo y los más importante para nosotros, ofrecer a nuestros, ofrecer a nuestros clientes un equipo de profesionales
-  cualificados y con una gran experiencia dentro del sector de reformas de hogar.`;
+  paragraphs3: string = `SOLFETER REFORMA-HOGAR, nace para proporcionar soluciones prácticas a nuestros clientes en todo tipo de reformas del hogar. 
+  Apostamos por un trato personalizado y materiales de primera calidad.`;
 
   /*paragraphs4: string = `Un sueño, una ilusión, esa reforma que tienes penado hacer en tu hogar y que no haces porque no encuentras tiempo ni profesionales, SOLFETER REFORMA-HOGAR
   es tu solución, cuentanos tu sueño, cuentanos tu ilusión, hablanos de esa reforma aplazada en el tiempo. Nosotros convertimos tus sueños y ilusiones en realidad.`;*/

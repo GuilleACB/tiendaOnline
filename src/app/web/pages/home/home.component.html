@@ -13,13 +13,26 @@
 <!-- Quienes somos y formulario-->
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2" id="quienesSomos">
 
-  <div class="container mt-5">
-    <div class="text-center">
-      <p class="paragrafo d-none d-sm-none d-md-block" [innerHTML]="paragraphs1"></p>
-      <p class="paragrafo d-none d-sm-none d-md-block" [innerHTML]="paragraphs2"></p>
-      <p class="" [innerHTML]="paragraphs3"></p>
+    <div id="contactForm" class="col mt-4" >
+        <!--<app-contact-form></app-contact-form>-->
+        <img src="../../../../assets/img/Group 1 (1).svg" alt="" class="img-fluid">
     </div>
-  </div>
+    <div class="container mt-5">
+
+        <div class="text-center d-block d-sm-block d-md-none">
+            <!--<p class="paragrafo d-none d-sm-none d-md-block" [innerHTML]="paragraphs1"></p>-->
+            <p class="paragrafo d-block d-sm-block d-md-none" [innerHTML]="paragraphs2"></p>
+            <p class="d-block d-sm-block d-md-none" [innerHTML]="paragraphs3"></p>
+            <!--<p class="" [innerHTML]="paragraphs4"></p>-->
+        </div>
+        <div class=" text-center d-none d-sm-none d-md-block">
+            <!--<p class="paragrafo d-none d-sm-none d-md-block" [innerHTML]="paragraphs1"></p>-->
+            <p class="paragrafo d-none d-sm-none d-md-block" [innerHTML]="paragraphs2" style="margin-top:150px;"></p>
+            <p class="d-none d-sm-none d-md-block" [innerHTML]="paragraphs3"></p>
+            <!--<p class="" [innerHTML]="paragraphs4"></p>-->
+        </div>
+    </div>
+
 
   <div id="contactForm" class="col mt-4">
     <!--<app-contact-form></app-contact-form>-->
