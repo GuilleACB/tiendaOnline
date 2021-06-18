@@ -6,6 +6,7 @@ import {DashboardLayoutComponent} from './layout/dashboard-layout/dashboard-layo
 import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginComponent } from './shared/components/user/login/login.component';
 import { Page404Component } from './shared/components/page404/page404.component';
+import { AuthGuard } from './auth.guard';
 
 
 
@@ -20,7 +21,7 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
-  
+
   {
     path: '',
     component: WebLayoutComponent,
@@ -33,7 +34,8 @@ const routes: Routes = [
     component: DashboardLayoutComponent,
     children: [
       { path: 'dashboard', loadChildren: () => DashboardModule }
-    ]
+    ],
+    canActivate: [AuthGuard]
   }
 ]
 

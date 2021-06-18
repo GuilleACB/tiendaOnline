@@ -19,19 +19,13 @@
             <li class="nav-item">
               <a class="nav-link" href="#queHacemos">QUE HACEMOS</a>
             </li>
-            <!--<li class="nav-item">
-              <a class="nav-link" href="#">PROYECTOS</a>
-            </li>-->
-            <!--<li class="nav-item">
-              <a class="nav-link" href="#">SERVICIOS</a>
-            </li>-->
-            <!--<li class="nav-item">
-              <a class="nav-link" href="#">POR QUÉ NOSOTOS</a>
-            </li>-->
             <li class="nav-item">
               <a class="nav-link " routerLink="/web/app-contacto">CONTACTO</a>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link " *ngIf="isLogged" routerLink="/login">LOGIN</a>
+            </li>
+
             <li class="nav-item d-block d-sm-block d-md-none">
               <hr>
               <span class="phone"><i class="fas fa-phone"></i> Llamar: <a class="nav-link phoneNumber" href="#965404705">96 540 47 05</a></span>
