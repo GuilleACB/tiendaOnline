@@ -1,12 +1,12 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyBmA4akmPbyn6F6qYDBpfasrZKQYlvkcUw",
-    authDomain: "tiendaonline-7d4c0.firebaseapp.com",
-    projectId: "tiendaonline-7d4c0",
-    storageBucket: "tiendaonline-7d4c0.appspot.com",
-    messagingSenderId: "864706299224",
-    appId: "1:864706299224:web:d6338c6c15dda4da11512d",
-    measurementId: "G-LQEDBLNSRG"
+    apiKey: "AIzaSyBlggofYoG2iFV9lKjDSdNAxrgDMLKSyPY",
+    authDomain: "cristaleriatest.firebaseapp.com",
+    projectId: "cristaleriatest",
+    storageBucket: "cristaleriatest.appspot.com",
+    messagingSenderId: "688803904504",
+    appId: "1:688803904504:web:ed33dd1080db5590c2340d",
+    measurementId: "G-J709GFWNVL"
   }
 };

@@ -49,26 +49,17 @@
                             <span data-feather="file"></span>
                             <div class="fas fa-inbox"></div>
                             Entrada
-                            <span class="badge badge-pill badge-warning text-primary ">7</span>
+                            <span class="badge badge-pill badge-warning text-primary ">{{nMnsEntrada}}</span>
                         </a>
-                        <a class="nav-link" routerLink="/dashboard/mensajes-contacto">
+                        <a class="nav-link" routerLink="/dashboard/mensajes-contacto-leidos">
                             <span data-feather="file"></span>
                             <div class="fas fa-glasses"></div>
                             Leidos
-                            <span class="badge badge-pill badge-warning text-primary ">0</span>
-                        </a>
-                        <a class="nav-link" routerLink="/dashboard/mensajes-contacto">
-                            <span data-feather="file"></span>
-                            <div class="fas fa-trash"></div>
-                            Borrados
-                            <span class="badge badge-pill badge-warning text-primary ">0</span>
+                            <span class="badge badge-pill badge-warning text-primary ">{{nMnsLeidos}}</span>
                         </a>
                     </li>
-
-
-
                     <li class="d-grid d-md-block m-2">
-                       
+
                         <button class="btn btn-dark " (click)="onLogout()">  <i class="fas fa-sign-out-alt"></i> Salir</button>
                     </li>
                 </ul>
